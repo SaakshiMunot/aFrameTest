@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>Stage With Video</title>
+
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script type = "module" src = "aFrameJS.js"></script>
+    <link rel="stylesheet" href="aFrameCSS.css" type = "text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <a-scene embedded light="defaultLightsEnabled: false" cursor="rayOrigin: mouse">
+      <a-sky color="midnightblue" material="color:#06061e" geometry=""></a-sky>
+
+<!---------------------------------------------------------->
+      
+      <a-entity gltf-model="colors/blue.glb" position="0.76877 0.00759 1.81263" scale="0.02 0.02 0.022" rotation="0 -161.79859 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "0.76877 0.15759 1.81263"
+          repeat = "indefinite"
+          dur = "500"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/red.glb" position="-0.31029 0.00759 2.25821" scale="0.02 0.02 0.022" rotation="0 -192.53 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "-0.31029 0.15759 2.25821"
+          repeat = "indefinite"
+          dur = "700"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/orange.glb" position="-0.73965 0.00759 1.2846" scale="0.02 0.02 0.022" rotation="0 -191.43 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "-0.73965 0.15759 1.2846"
+          repeat = "indefinite"
+          dur = "500"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/purple.glb" position="1.25378 0.00759 1.41466" scale="0.02 0.02 0.022" rotation="0 -160 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "1.25378 0.15759 1.41466"
+          repeat = "indefinite"
+          dur = "300"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/red.glb" position="0.43302 0.00759 1.13925" scale="0.02 0.02 0.022" rotation="0 -170 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "0.43302 0.15759 1.13925"
+          repeat = "indefinite"
+          dur = "500"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/yellow.glb" position="-0.94902 0.00759 1.76634" scale="0.02 0.02 0.022" rotation="0 -191.53 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "-0.94902 0.15759 1.76634"
+          repeat = "indefinite"
+          dur = "400"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/orange.glb" position="0.56778 0.00759 2.38305" scale="0.02 0.02 0.022" rotation="0 -171 0" id="person" >
+        <a-animation 
+          attribute = "position"
+          to = "0.56778 0.15759 2.38305"
+          repeat = "indefinite"
+          dur = "600"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/purple.glb" position="-1.19763 0.00759 0.94881" scale="0.02 0.02 0.022" rotation="0 -191.77 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "-1.19763 0.15759 0.94881"
+          repeat = "indefinite"
+          dur = "300"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/green.glb" position="0 0.00759 1.48355" scale="0.02 0.02 0.022" rotation="0 -180 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "0 0.15759 1.48355"
+          repeat = "indefinite"
+          dur = "300"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+      
+<!---------------------------------------------------------->
+      
+      <a-entity obj-model="obj:stage.obj;mtl:stage.mtl" rotation="-90 0 0" scale="0.03 0.03 0.03" position="0 0 -3.4634" id="stage"></a-entity>
+
+      <a-entity obj-model="obj:grass.obj;mtl:grass.mtl" rotation="-90 0 0" scale="0.15 0.15 0.03" position="0 0 -0.12138" id="grass"></a-entity>
+
+      <a-entity camera="" position="0 0.97227 0.42759" rotation="-2.7501974166279552 0 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" id = "cameraID" wasd-controls-enabled = "false"></a-entity>
+
+      <a-video width="16" height="9" position="0 1.25983 -3.03747" material="src:mine.mp4" geometry="" scale="0.15 0.15 0.15" play="true" onclick="zoomInVideo()"></a-video>
+
+      <a-entity light="color:#BBB;type:ambient;intensity:0.41" data-aframe-default-light="" aframe-injected=""></a-entity>
+
+      <a-entity light="color:#BBB;type:spot;intensity:0.31" data-aframe-default-light="" position="0 1.112 3.486" aframe-injected=""></a-entity>
+
+      <a-entity light="intensity:0.29;decay:0" position="0 5.64903 4.35221" data-aframe-default-light="" aframe-injected="">      </a-entity>
+    </a-scene>
+
+  </body>
+</html>
